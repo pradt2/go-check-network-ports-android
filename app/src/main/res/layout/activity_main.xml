@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/hostnameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="hostname"
+        android:inputType="textUri"
+        android:text="api.thinkthing.xyz" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/startPortExitText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="start port"
+            android:inputType="number"
+            android:text="2000" />
+
+        <EditText
+            android:id="@+id/endPortEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="end port"
+            android:inputType="number"
+            android:text="2010" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/timeoutEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="timeout (ms)"
+        android:inputType="number"
+        android:text="2000" />
+
+    <Button
+        android:id="@+id/runButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="runOnClick"
+        android:text="Run" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/outputTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:typeface="monospace" />
+    </ScrollView>
+
+</LinearLayout>
